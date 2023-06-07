@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Definición de los estilos del botón */
+    .rotating-button {
+      width: 100px;
+      height: 100px;
+      background-color: #e74c3c;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    /* Estilo adicional para el botón giratorio */
+    .rotating-button.rotating {
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <!-- Botón con una clase "rotating-button" -->
+  <div class="rotating-button" onclick="rotateButton()">Click Me</div>
+
+  <script>
+    // Función para agregar o quitar la clase "rotating" al botón
+    function rotateButton() {
+      var button = document.querySelector('.rotating-button');
+      button.classList.toggle('rotating');
+    }
+  </script>
+</body>
+</html>
